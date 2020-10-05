@@ -25,7 +25,7 @@ public class Branch {
         }
         return false;
     }
-    public boolean addTransaction(String customerName, double amount){
+    public boolean addCustomerTransaction(String customerName, double amount){
         Customer existingCustomer = findCustomer(customerName);
         if(existingCustomer!= null){
             existingCustomer.addTransaction(amount);
@@ -33,6 +33,7 @@ public class Branch {
         }
         return false;
     }
+
 //    Deemed private because this method is not used outside of the Branch class
     private Customer findCustomer(String customerName){
         for(int i=0; i<this.customers.size(); i++){
